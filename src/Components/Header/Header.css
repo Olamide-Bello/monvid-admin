@@ -1,0 +1,168 @@
+.header {
+    background-color: #fff;
+    padding: 30px !important;
+    height: 10vh;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brand-name {
+    color: orangered !important;
+    font-family: cursive;
+}
+
+.navlinks-item {
+    margin-right: 25px;
+}
+
+.navlinks-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px orangered solid;
+}
+
+.color-red:hover {
+    color: orangered;
+}
+
+.navlinks-item.cart {
+    border-bottom: none;
+    background-color: #fff;
+    position: relative;
+}
+
+.cart-length {
+    position: absolute;
+    color: #fff;
+    background-color: orangered;
+    border-radius: 100%;
+    padding: 10px;
+    transform: translate(-10px, -3px) !important;
+}
+
+.account-btn {
+    padding: 5px;
+    border: 1px orangered solid;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #444;
+}
+
+.account-btn:hover {
+    color: #fff;
+    background-color: orangered;
+}
+
+.user-avatar {
+    background-color: orangered;
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    text-align: center;
+    position: relative;
+}
+
+.user-menu {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    color: #555;
+    border-radius: 10px;
+    font-size: 16px;
+    display: none;
+}
+
+.user-avatar:hover .user-menu {
+    display: block;
+}
+
+.user-menu>div {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #aaa solid;
+    padding: 10px;
+}
+
+.user-menu .user-avatar {
+    background-color: orangered;
+    color: #fff;
+    border-radius: 110%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.user-menu * {
+    margin-bottom: 0;
+}
+
+.user-menu *:not(:first-child, :last-child) {
+    text-align: left;
+    padding: 10px;
+}
+
+.user-menu *:not(:first-child, :last-child):hover {
+    background-color: #f4f4f4;
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #555;
+}
+
+.log-out-btn {
+    padding: 10px 20px;
+    background-color: orange;
+    border: 1px #fff solid;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.log-out-btn:hover {
+    background-color: gold;
+}
+
+.searchArea {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200%;
+
+}
+
+.input {
+    height: 40px;
+    width: 100%;
+    border: 1px #0f729c solid;
+    border-radius: 15px;
+    padding: 5px 10px;
+    text-indent: 30px;
+}
+
+.input:focus {
+    border: 2px orangered solid;
+    outline: orangered;
+}
+
+.searchArea .fa-magnifying-glass {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}

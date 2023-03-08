@@ -1,0 +1,59 @@
+.product-upload {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border-top: #aaa 1px solid;
+}
+
+.preview {
+    width: 40%;
+    border-right: 1px #aaa solid;
+}
+
+.preview-container {
+    height: 440px;
+    width: 440px;
+    padding: 20px;
+    border: 1px #555 solid;
+}
+
+#product-preview {
+    width: 400px;
+    height: 400px;
+}
+
+#image-upload-btn {
+    border: none;
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#image-upload-btn:hover {
+    background-color: lightgreen;
+}
+
+.form {
+    width: 60%;
+    padding: 15px;
+}
+
+.form-group1 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group1 input {
+    margin-top: 5px;
+    width: 60%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    margin-top: 20px;
+}
+
+.form-group1 input:focus {
+    outline: orangered;
+    border: 1px orangered solid;
+}

@@ -1,0 +1,75 @@
+.sign-in-modal {
+    height: 80vh;
+    width:50vw;
+    padding-top: 15px;
+    position: fixed;
+    z-index: 40;
+    top: 15vh;
+    left: 25vw;
+    background: #fff;
+    box-shadow: 4px 3px 13px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.modal-exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight:lighter;
+}
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.form-group {
+    text-align: center;
+}
+
+.form-group input {
+    width: 60%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    margin-top: 20px;
+}
+.form-group input:focus {
+    outline: orangered;
+    border: 1px orangered solid;
+}
+
+#submit-btn {
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 30px;
+    padding: 10px 5px;
+    border: none;
+    background: orangered;
+    color: #fff;
+}
+.sign-in-modal h1 {
+    color: #444;
+}
+.sign-in-modal p:first-of-type {
+    color: orangered;
+}
+
+.sign-in-modal a {
+    text-decoration: none;
+}
+.modal-exit {
+    color: #444;
+
+}
