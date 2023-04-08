@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Components/Header/Header'
-import UserSearch from '../Components/UserSearch/UserSearch'
+import Header from '../Components/Header/Header.js'
+import UserSearch from '../Components/UserSearch/UserSearch.js'
 
 function UserSearchPage() {
   return (

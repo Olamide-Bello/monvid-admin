@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import UserSearch from '../UserSearch/UserSearch'
+import UserSearch from '../UserSearch/UserSearch.js'
 import './Hero.css'
 import heroImage from './Hero.jpg'
 

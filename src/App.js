@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
-import Home from './Pages/Home';
-import ProductUploadPage from './Pages/ProductUploadPage';
-import ProductDetailPage from './Pages/ProductDetailPage';
-import UserSearchPage from './Pages/UserSearchPage';
+import Home from './Pages/Home.js';
+import ProductUploadPage from './Pages/ProductUploadPage.js';
+import ProductDetailPage from './Pages/ProductDetailPage.js';
+import UserSearchPage from './Pages/UserSearchPage.js';
 
 function App() {
   return (

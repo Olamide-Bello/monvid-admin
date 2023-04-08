@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { GlobalContext } from '../GlobalContext'
+import { GlobalContext } from '../GlobalContext.js'
 import './SearchResult.css'
 
 function SearchResult() {

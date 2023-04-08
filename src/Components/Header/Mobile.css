@@ -1,0 +1,42 @@
+.mobile-header {
+    padding: 10px 15px;
+    background-color: #fff;
+    margin-top: 0;
+    box-sizing: content-box;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+.mobile-search {
+    background-color: #fff;
+    margin-top: 10px;
+    position: relative;
+}
+
+.mobile-search  .searchArea {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+
+.mobile-search>.searchArea>input,
+.normal-search >.searchArea>.input {
+    width: 100%;
+    background-color: #ddd;
+    color: #666;
+    border-radius: 18px;
+    padding: 5px 10px;
+    text-indent: 30px;
+    outline: none;
+    border: none;
+}
+
+
+.mobile-search>.searchArea>input:focus,
+.normal-search >.searchArea>.input:focus {
+    border: 2px orangered solid;
+    outline: orangered;
+} 

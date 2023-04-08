@@ -13,17 +13,21 @@ export const GlobalContext = createContext({
     deleteItem: () => { },
     handleQty: () => { },
     logUser: () => { },
+    logOut: () => { },
+    logged: false,
     user: {},
     handleUser: () => { },
+    matches: window.matchMedia("(max-width: 768px)").matches,
+    normalScreen: window.matchMedia("(min-width: 768px) and (max-width: 1100px)").matches
 })
 
 function GlobalState({ children }) {
     const [searchParam, setSearchParam] = useState("")
-    // const [allProducts, setAllProducts] = useState([])
     const [searchResult, setSearchResult] = useState([])
     const [searchMatch, setSearchMatch] = useState(true)
     const [category, setCategory] = useState("")
     const searchValue = useRef("")
+    const [logged, setLogged] = useState(false)
     const [token, setToken] = useState(
         () => {
             const savedSession = localStorage.getItem("admin-token");
@@ -37,15 +41,21 @@ function GlobalState({ children }) {
     const [user, setUser] = useState(
         () => {
             const savedUser = localStorage.getItem("admin");
-            if (savedUser) {
+            if (token) {
+                setLogged(true)
                 return JSON.parse(savedUser);
             } else {
                 return {};
             }
         }
     )
+
     const [matches, setMatches] = useState(
-        window.matchMedia("(min-width: 768px)").matches
+        window.matchMedia("(max-width: 768px)").matches
+    )
+
+    const [normalScreen, setNormalScreen] = useState(
+        window.matchMedia("(min-width: 769px) and (max-width: 1100px)").matches
     )
 
     const handleChange = async (e) => {
@@ -57,16 +67,14 @@ function GlobalState({ children }) {
         setCategory(e.target.name)
     }
 
-    // const deleteItem = (e) => {
-    //     let copy = cart.filter((product) => {
-    //         return product.id !== +e.currentTarget.id
-    //     })
-    //     setCart(copy)
-    //     toast.info("item removed from cart successfully!")
-    // }
 
     const logUser = (newToken) => {
         setToken(newToken)
+        setLogged(true)
+    }
+
+    const logOut = () => {
+        setLogged(false)
     }
 
     const handleUser = (userData) => {
@@ -76,8 +84,13 @@ function GlobalState({ children }) {
 
     useEffect(() => {
         window
-            .matchMedia("(min-width: 768px)")
+            .matchMedia("(max-width: 768px)")
             .addEventListener('change', e => setMatches(e.matches));
+    }, []);
+    useEffect(() => {
+        window
+            .matchMedia("(min-width: 769px) and (max-width: 1100px)")
+            .addEventListener('change', e => setNormalScreen(e.matches));
     }, []);
     useEffect(() => {
         localStorage.setItem("admin-token", token);
@@ -131,11 +144,12 @@ function GlobalState({ children }) {
         searchMatch,
         handleChange,
         matches,
-        // allProducts,
+        normalScreen,
+        logged,
+        logOut,
         handleCategory,
         category,
         // deleteItem,
-        // handleQty,
         logUser,
         user,
         handleUser,

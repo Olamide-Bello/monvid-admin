@@ -1,19 +1,16 @@
 import React, { useContext } from "react";
-import Container from "react-bootstrap/esm/Container";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import './Header.css';
-import { GlobalContext } from "../GlobalContext";
+import { GlobalContext } from "../GlobalContext.js";
 
-function Search() {
-    const { handleChange } = useContext(GlobalContext)
+function Search({ showSearch }) {
+    const { handleChange, matches, normalScreen } = useContext(GlobalContext)
     return (
-        <div className="search">
-            <Container>
-                <div id="search-area" className="searchArea">
-                    <input id="search" name="search"  type="search" onChange={handleChange} className="input" placeholder="Enter product or category name" /><FontAwesomeIcon icon={faMagnifyingGlass} />
-                </div>
-            </Container>
+        <div className={(matches && "mobile-search") || (showSearch && normalScreen && "normal-search") || "search"}>
+            <div id="search-area" className="searchArea">
+                <input id="search" name="search" type="search" onChange={handleChange} className="input" placeholder="Enter product or category name" /><FontAwesomeIcon icon={faMagnifyingGlass} />
+            </div>
         </div>
     )
 }

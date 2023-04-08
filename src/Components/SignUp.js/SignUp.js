@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import './SignUp.css'
 import { toast } from 'react-toastify';
-import { GlobalContext } from '../GlobalContext';
+import { GlobalContext } from '../GlobalContext.js';
 
 function SignUpModal({ setModal }) {
     const { logUser, handleUser } = useContext(GlobalContext)
